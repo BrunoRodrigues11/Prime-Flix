@@ -1,7 +1,27 @@
+import { useEffect, useState } from "react";
+import api from "../../services/api";
+// URL DA API = /movie/now_playing?api_key=1f63b1c19e27b028d0a70d1cd9f90fc6&language=pt-BR
+
 function Home() {
+  const [filmes, setFilmes] = useState([]);
+
+  useEffect(() => {
+    async function loadFilmes() {
+      const response = await api.get("/movie/now_playing", {
+        params: {
+          api_key: "1f63b1c19e27b028d0a70d1cd9f90fc6",
+          language: "pt-BR",
+          page: 1,
+        },
+      });
+
+      console.log(response.data.results);
+    }
+    loadFilmes();
+  }, []);
   return (
     <div>
-      <kh1>BEM-VINDO A HOME!</kh1>
+      <h1>BEM-VINDO A HOME!</h1>
     </div>
   );
 }

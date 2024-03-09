@@ -1,7 +1,7 @@
 function Filme() {
   return (
     <div>
-      <kh1>BEM-VINDO A PÁGINA DETALHES DO FILME!</kh1>
+      <h1>BEM-VINDO A PÁGINA DETALHES DO FILME!</h1>
     </div>
   );
 }
