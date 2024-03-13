@@ -8,6 +8,7 @@
 .lista-filmes {
   max-width: 100%;
   padding: 10px 60px 4px 60px;
+  overflow: hidden;
 }
 
 .lista-filmes-tittle {
@@ -31,9 +32,9 @@
   color: #fff;
 }
 
-.lista-filmes-content {
+/* .lista-filmes-content {
   display: inline-flex;
-}
+} */
 
 .lista-filmes-item {
   display: flex;
