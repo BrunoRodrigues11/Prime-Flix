@@ -7,6 +7,7 @@ import "./home.css";
 function Home() {
   const [filmes, setFilmes] = useState([]);
   const [loading, setLoading] = useState(true);
+  let ranking = 0;
 
   useEffect(() => {
     async function loadFilmes() {
@@ -36,18 +37,28 @@ function Home() {
   return (
     <div className="container">
       <div className="lista-filmes">
-        {filmes.map((filme) => {
-          return (
-            <article key={filme.id}>
-              <strong>{filme.title}</strong>
-              <img
-                src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`}
-                alt={filme.title}
-              />
-              <Link to={`/filme/${filme.id}`}>Acessar</Link>
-            </article>
-          );
-        })}
+        <div className="lista-filmes-tittle">
+          <h1>TOP 10 </h1>
+          <h3>
+            FILMES <br /> DE HOJE
+          </h3>
+        </div>
+        <div className="lista-filmes-content">
+          {filmes.map((filme) => {
+            ranking++;
+            return (
+              <article className="lista-filmes-item" key={filme.id}>
+                <h1>{ranking}</h1>
+                <Link to={`/filme/${filme.id}`}>
+                  <img
+                    src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`}
+                    alt={filme.title}
+                  />
+                </Link>
+              </article>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
