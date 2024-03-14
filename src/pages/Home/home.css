@@ -50,7 +50,8 @@
 }
 
 .lista-filmes-item img {
-  width: calc(-36.6667px + 16.6667vw);
+  /* width: calc(-36.6667px + 16.6667vw); */
+  width: 170px;
   display: block;
   border: 2px solid transparent;
   transition: 0.3s;
