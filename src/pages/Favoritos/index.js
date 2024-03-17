@@ -23,22 +23,29 @@ function Favoritos() {
 
   return (
     <div className="meus-filmes">
-      <h1>Meus filmes</h1>
-
-      {filmes.length === 0 && <span>Você não possui nenhum filme salvo!</span>}
-      <ul>
-        {filmes.map((item) => {
+      <div className="meus-filmes-tittle">
+        <h1>Meus filmes</h1>
+      </div>
+      <div className="meus-filmes-content">
+        {filmes.length === 0 && (
+          <span>Você não possui nenhum filme salvo!</span>
+        )}
+        {filmes.map((filme) => {
           return (
-            <li key={item.id}>
-              <span>{item.title}</span>
-              <div>
-                <Link to={`/filme/${item.id}`}>Ver detalhes</Link>
-                <button onClick={() => excluirFilme(item.id)}>Excluir</button>
-              </div>
-            </li>
+            <div className="meus-filmes-item" key={filme.id}>
+              <Link to={`/filme/${filme.id}`}>
+                <img
+                  src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`}
+                  alt={filme.title}
+                />
+              </Link>
+              <div> </div>
+              <span>{filme.title}</span>
+              <button onClick={() => excluirFilme(filme.id)}>Remover</button>
+            </div>
           );
         })}
-      </ul>
+      </div>
     </div>
   );
 }

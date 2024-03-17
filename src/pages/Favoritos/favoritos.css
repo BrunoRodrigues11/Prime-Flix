@@ -1,38 +1,50 @@
 .meus-filmes {
-  margin-top: 24px;
+  max-width: 100%;
+  padding: 10px 60px 4px 60px;
+  overflow: hidden;
+}
+
+.meus-filmes-content {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: space-between;
+  color: #fff;
+}
+.meus-filmes-tittle {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 14px;
+  color: #fff;
+}
+
+.meus-filmes-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 10px 0;
 }
 
-.meus-filmes h1 {
-  margin-top: 14px;
+.meus-filmes-item img {
+  width: 350px;
+  display: block;
+  border: 2px solid transparent;
+  transition: 0.3s;
 }
 
-.meus-filmes span {
-  font-size: 18px;
+.meus-filmes-item img:hover {
+  border: 2px solid #fff;
+  transition: 0.3s;
 }
 
-.meus-filmes ul {
-  width: 720px;
+.meus-filmes-item span {
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 2px;
 }
 
-.meus-filmes ul li {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 14px;
-}
-
-.meus-filmes div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.meus-filmes div a {
-  text-decoration: none;
-  color: #116feb;
-  margin-right: 14px;
+.meus-filmes-item button {
+  width: 25%;
+  padding: 5px;
+  margin-left: 2px;
 }
