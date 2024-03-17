@@ -1,0 +1,58 @@
+.banner-filmes {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.banner-filmes-tittle {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60%;
+  max-width: 40%;
+  padding: 10px 60px 4px 60px;
+}
+
+.banner-filmes-tittle h1 {
+  font-size: 20px;
+  color: #fff;
+  padding: 5px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.banner-filmes-tittle p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.banner-filmes-tittle button {
+  padding: 10px 24px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+.banner-filmes-item {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: baseline;
+  height: 100%;
+}
+
+.banner-filmes-item img {
+  width: 100%;
+  display: block;
+}

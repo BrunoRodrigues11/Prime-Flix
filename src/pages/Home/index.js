@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import { Link } from "react-router-dom";
+import BannerSlider from "../../components/Banner-slider";
 import "./home.css";
 
 import Slider from "react-slick";
@@ -50,6 +51,7 @@ function Home() {
 
   return (
     <div className="container">
+      <BannerSlider filmes_list={filmes} />
       <div className="lista-filmes">
         <div className="lista-filmes-tittle">
           <h1>TOP 10 </h1>
