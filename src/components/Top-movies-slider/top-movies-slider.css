@@ -12,8 +12,9 @@
 }
 
 .lista-filmes-tittle h1 {
-  font-size: 50px;
-  color: #116feb;
+  font-size: 55px;
+  -webkit-text-stroke: 1px #116feb; /* para navegadores baseados em WebKit (Safari, Chrome) */
+  color: transparent; /* torna o texto transparente para mostrar apenas o contorno */
   padding: 5px;
   font-weight: bold;
   margin-right: 10px;
@@ -39,7 +40,9 @@
 
 .lista-filmes-item h1 {
   font-size: 9rem;
-  color: #116feb;
+  -webkit-text-stroke: 1px #116feb;
+  color: transparent;
+  transition: 0.3s;
 }
 
 .lista-filmes-item img {
@@ -53,11 +56,6 @@
   margin-right: -25px;
 }
 
-.lista-filmes-item img:hover {
-  border: 2px solid #fff;
-  transition: 0.3s;
-}
-
 .lista-filmes-item a {
   display: flex;
   align-items: center;
@@ -65,4 +63,14 @@
   padding: 10px 0;
   font-size: 24px;
   text-decoration: none;
+}
+
+.lista-filmes-item:hover img {
+  border: 2px solid #fff;
+  transition: 0.3s;
+}
+
+.lista-filmes-item:hover h1 {
+  color: #116feb;
+  transition: 0.3s;
 }
