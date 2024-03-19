@@ -15,7 +15,7 @@
 .banner-filmes-tittle h1 {
   font-size: 20px;
   color: #fff;
-  padding: 5px;
+  padding: 5px 0;
   font-weight: bold;
   margin-right: 10px;
 }
@@ -26,11 +26,17 @@
   font-size: 16px;
   line-height: 24px;
   color: #fff;
-  padding: 5px;
+  padding: 5px 0;
   margin-right: 10px;
 }
 
+.banner-filmes-tittle a {
+  padding: 5px 0;
+  text-decoration: none;
+}
+
 .banner-filmes-tittle button {
+  display: flex;
   padding: 10px 24px;
   background-color: #fff;
   color: #000;
@@ -42,6 +48,13 @@
   margin-right: 10px;
   margin-top: 5px;
   border-radius: 4px;
+  transition: all ease 0.5s;
+}
+
+.banner-filmes-tittle button:hover {
+  background-color: #116feb;
+  color: #fff;
+  transition: all ease 0.5s;
 }
 
 .banner-filmes-item {

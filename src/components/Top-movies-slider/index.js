@@ -30,8 +30,8 @@ function TopMoviesSlider(filmes_list) {
           {filmes_list.filmes_list.map((filme) => {
             ranking++;
             return (
-              <div>
-                <article className="lista-filmes-item" key={filme.id}>
+              <div key={filme.id}>
+                <article className="lista-filmes-item">
                   <h1>{ranking}</h1>
                   <Link to={`/filme/${filme.id}`}>
                     <img
